@@ -177,13 +177,15 @@ for i in range(1000001):
     datos_json.append(obj)
     print(i)
 
-print("Estableciendo coneccion con Mongodb")
+print("Estableciendo conexion con Mongodb\n")
 
 # Conectamos con la base de datos de MongoDB
 client = pymongo.MongoClient("mongodb://localhost:27017/")
-db = client["RegistrosAlumnos"]
-collection = db["Datos"]
+db = client["Alumnos"]
+collection = db["Registros"]
 
-print("Inseando alumnos en la coleccion..")
+print("Insertando alumnos en la coleccion...\n")
 
 result = collection.insert_many(datos_json)
+
+print("Listo!!, los datos se generaron con exito")
