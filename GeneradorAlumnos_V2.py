@@ -2,7 +2,6 @@
 import random
 from faker import Faker
 import pymongo
-import json
 
 faker = Faker()
 
